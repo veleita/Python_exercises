@@ -19,13 +19,22 @@ class Node:
             if data < self.data:
                 if self.left is None:
                     self.left = Node(data)
+                    return
                 else:
                     self.left.insert(data)
-            else:
+            elif data > self.data:
                 if self.right is None:
                     self.right = Node(data)
+                    return
                 else:
                     self.right.insert(data)
+            else:
+                if self.left is None:
+                    self.left = Node(data)
+                elif self.right is None:
+                    self.right = Node(data)
+                else:
+                    self.left.insert(data)
         else:
             self.data = data
 
