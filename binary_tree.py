@@ -15,7 +15,7 @@ class Node:
             self.right.print_tree()
 
     def insert(self, data):
-        if self.data:
+        if self.data is not None:
             if data < self.data:
                 if self.left is None:
                     self.left = Node(data)
@@ -82,16 +82,16 @@ class BinaryTree:
             return str(value) + " found"
 
 # TESTS
-root = Node(12)
-root.insert(6)
-root.insert(14)
-root.insert(3)
-root.print_tree()
+# root = Node(12)
+# root.insert(6)
+# root.insert(14)
+# root.insert(3)
+# root.print_tree()
+#
+# tree = BinaryTree(root)
+# print(tree.inorder_traversal(tree.root))
+# print(tree.preorder_traversal(tree.root))
+# print(tree.postorder_traversal(tree.root))
 
-tree = BinaryTree(root)
-print(tree.inorder_traversal(tree.root))
-print(tree.preorder_traversal(tree.root))
-print(tree.postorder_traversal(tree.root))
-
-print(tree.find_value(13))
+# print(tree.find_value(13))
 
